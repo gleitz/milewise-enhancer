@@ -1,0 +1,28 @@
+{
+    "name": "Milewise Enhancement Suite",
+    "version": "0.1",
+    "description": "Upgrades your Milewise experience with a special surprise",
+    "icons": {
+        "128": "icon128.png"
+    },
+    "permissions": [
+        "tabs", "https://secured.milewise.com/*"
+        ],
+    "background": {
+        "scripts": [
+            "jquery.min.js",
+            "background.js"
+            ]
+    },
+    "content_scripts": [
+        {
+        "matches": [
+            "https://secured.milewise.com/*"
+            ],
+        "js": [
+            "inject.js"
+            ]
+    }
+    ],
+    "manifest_version": 2
+}
